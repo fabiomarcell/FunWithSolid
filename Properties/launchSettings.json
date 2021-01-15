@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FunWithSolid": {
+      "commandName": "Project",
+      "commandLineArgs": "-f"
+    }
+  }
+}
