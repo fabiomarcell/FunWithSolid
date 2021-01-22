@@ -1,4 +1,5 @@
-﻿using FunWithAdapters.MessageSenderAdapter;
+﻿using FunWithAdapters.Facade;
+using FunWithAdapters.MessageSenderAdapter;
 using System;
 
 namespace FunWithAdapters
@@ -9,7 +10,7 @@ namespace FunWithAdapters
         {
             new MessageSenderService(new MessageSender()).SendMessage();
 
-            new MessageSenderService(new MessageSenderAdapterSMS(new MessageSenderSMS())).SendMessage();
+            new MessageSenderService(new MessageSenderAdapterSMS(new MessageSenderFacadeSMS(new MessageSenderSMS()))).SendMessage();
 
             new MessageSenderService(new MessageSenderAdapterTelegram(new MessageSenderTelegram())).SendMessage();
         }

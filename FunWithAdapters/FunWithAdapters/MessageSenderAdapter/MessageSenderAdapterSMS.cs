@@ -7,15 +7,15 @@ namespace FunWithAdapters.MessageSenderAdapter
 {
     public class MessageSenderAdapterSMS : IMessageSender
     {
-        private IMessageSenderSMS _sms;
+        private IMessageSenderFacadeSMS _sms;
 
-        public MessageSenderAdapterSMS(IMessageSenderSMS sms)
+        public MessageSenderAdapterSMS(IMessageSenderFacadeSMS sms)
         {
             _sms = sms;
         }
         public void SendMessage()
         {
-            _sms.SendSms();
+            _sms.EnviarSms();
         }
     }
 }
